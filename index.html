@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOTERIA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    
+   <h1 id="main-header">LOTERIA</h1>
+   
+       <div id="card-name-display">
+           <span id="card-name">Selecciona una Lotería</span>
+       </div>
+           <div id="lottery-selector-container">
+           <label for="lottery-select"></label>
+           <select id="lottery-select" onchange="changeLottery(this.value)">
+               <option value="" disabled selected>Cargando opciones...</option>
+           </select>
+       </div>
+
+ 
+
+    <div id="game-display-area">
+
+        <div id="discard-display">
+            <img id="discard-img" src="Loterias/Default/Descartada.jpg" alt="Espacio de Descarte">
+			
+        </div>
+
+        <div id="deck-display" class="flip-wrapper">
+			
+            <div class="card-container">
+                <div class="card" id="card">
+                    <img class="front" id="frontImage" src="Loterias/Default/reverso.jpg">
+                    <img class="back" id="backImage" src="Loterias/Default/reverso.jpg">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="button-group">
+        <button id="shuffle-button" onclick="shuffleDeck()">Barajear / Reiniciar</button>
+        <button id="draw-button" disabled onclick="drawCard()">Sacar Siguiente Carta</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
